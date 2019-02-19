@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import convertReducer from './convert-reducer';
 
 const rootReducer = combineReducers({
-	conversor: convertReducer
+	converter: convertReducer
 })
 
 export default rootReducer;

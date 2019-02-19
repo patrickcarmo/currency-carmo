@@ -2,7 +2,7 @@ import React from 'react';
 
 const CoinList = props => {
 	return (
-		<select name={props.source} className="form-control">
+		<select name={props.source} onChange={props.onValueChange} className="form-control">
 			<option value="">Select</option>
 			<option value='AED' >AED - United Arab Emirates Dirham</option>
 			<option value='AFN' >AFN - Afghan Afghani</option>

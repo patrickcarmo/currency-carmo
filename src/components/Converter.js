@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './Form';
+import { connect } from 'react-redux';
 
 const Converter = props => {
 	return (
@@ -10,10 +11,14 @@ const Converter = props => {
 						Carmo's Currency
 					</div>
 					<div className="card-body">
-						<Form />
+						<Form  />
 					</div>
 					<div className="card-footer text-light bg-dark">
-						0.00
+						{/* {
+							props.converter.quotes && 
+							props.converter.quotes[Object.keys(props.converter.quotes)[0]] * 10
+						} */}
+						{JSON.stringify(props.converter.quotes)}
 					</div>
 				</div>
 			</div>
@@ -21,4 +26,9 @@ const Converter = props => {
 	)
 }
 
-export default Converter;
+const mapStateToProps = (state) => {
+	return {
+		converter: state.converter
+	};
+}
+export default connect(mapStateToProps, null)(Converter);
