@@ -15,16 +15,16 @@ const Form = props => {
 			
 			<div className="row form-group">
 				<div className="col-md-6">
-					<label htmlFor="formSelectFrom">From:</label>
-					<CoinList source ="" />
+					<label htmlFor="from">From:</label>
+					<CoinList source ="from" />
 				</div>
 				<div className="col-md-6">
-					<label htmlFor="formSelectTo">To:</label>
-					<CoinList source="" />
+					<label htmlFor="to">To:</label>
+					<CoinList source="to" />
 				</div>
 			</div>
 		
-			<button type="button" className="btn btn-primary btn-lg btn-block">Converte</button>
+			<button type="submit" className="btn btn-primary btn-lg btn-block">Converte</button>
 		</form>
 	)
 }
